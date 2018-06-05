@@ -1,2 +1,2 @@
 # Stutz
-Repository for ChallengeDay Winner Team
+Repository for ChallengeDays 2018 Winner Team: Bits Please!
