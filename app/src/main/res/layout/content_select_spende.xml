@@ -16,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/hot_tea"
-        android:text="Kafi im Löscher"
+        android:text="Kafi im Löscher 3.50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
@@ -29,7 +29,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/sleeping"
-        android:text="Sleeper Nacht"
+        android:text="Sleeper Nacht 5.-"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/suppenkueche" />
@@ -41,8 +41,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/bread"
-        android:text="Menu Suppenküche"
+        android:drawableLeft="@drawable/restaurant"
+        android:text="Menu Suppenküche 5.-"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kafi" />
@@ -64,13 +64,13 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/sleeping" />
+                app:srcCompat="@drawable/profilfoto2" />
 
             <TextView
                 android:id="@+id/name"
