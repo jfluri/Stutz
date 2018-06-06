@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_stutz_start.*
@@ -17,6 +18,11 @@ class StutzStart : AppCompatActivity() {
         val inflater = getMenuInflater()
         inflater.inflate(R.menu.menu, menu)
         return true
+    }
+
+    fun loginclicked(menuItem: MenuItem) {
+        val intent = Intent("stutz.ch.mobi.stutz.LOGIN")
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

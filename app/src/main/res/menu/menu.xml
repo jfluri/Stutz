@@ -5,8 +5,12 @@
 
     <!-- Settings, should always be in the overflow -->
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/login"
+        android:onClick="loginclicked"
         android:title="Login"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/dienstleister_erfassen"
+        android:title="Dienstleister erfassen" />
 
 </menu>
