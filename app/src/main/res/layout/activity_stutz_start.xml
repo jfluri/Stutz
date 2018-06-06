@@ -11,6 +11,15 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -19,7 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,14 +39,22 @@
             android:id="@+id/nameSuchePerson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
             android:ems="10"
             android:hint="Name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
             android:id="@+id/person_suche_resultat"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="475dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameSuchePerson" />
     </android.support.constraint.ConstraintLayout>

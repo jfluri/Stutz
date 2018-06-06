@@ -6,17 +6,23 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-
 import kotlinx.android.synthetic.main.activity_stutz_start.*
 
 class StutzStart : AppCompatActivity() {
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = getMenuInflater()
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stutz_start)
+        setSupportActionBar(toolbar2)
 
         person_suche_resultat.adapter = PersonAdapter(
                 this,

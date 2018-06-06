@@ -17,10 +17,10 @@ class SelectSpende : AppCompatActivity() {
         setContentView(R.layout.activity_select_spende)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
         val person = PersonRepo().get(UUID.fromString(this.intent.getStringExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID")))
         name.text = person.name
         location.text = person.region
