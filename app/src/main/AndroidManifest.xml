@@ -18,18 +18,30 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="stutz.mobi.ch.stutz.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SelectSpende"
             android:label="@string/title_activity_select_spende"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.select_spende" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".Danke"
+            android:label="@string/title_activity_danke"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="stutz.mobi.ch.stutz.DANKE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

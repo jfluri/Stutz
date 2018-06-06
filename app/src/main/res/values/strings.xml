@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_person_suchen">Stutz</string>
     <string name="title_activity_select_spende">SelectSpende</string>
+    <string name="title_activity_danke">Danke</string>
 </resources>
