@@ -1,10 +1,13 @@
 package stutz.mobi.ch.stutz
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 
 import kotlinx.android.synthetic.main.activity_stutz_start.*
@@ -35,6 +38,13 @@ class StutzStart : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+        }
+        person_suche_resultat.setOnItemClickListener  {parent:Any,  view: View, position:Int, id:Long ->
+            val person:Person = person_suche_resultat.adapter.getItem(position) as Person
+
+            val i = Intent("stutz.mobi.ch.stutz.select_spende")
+            i.putExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID", person.id.toString())
+            startActivity(i)
         }
     }
 

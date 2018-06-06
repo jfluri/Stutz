@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_select_spende.*
+import java.util.*
 
 class SelectSpende : AppCompatActivity() {
 
@@ -17,10 +18,9 @@ class SelectSpende : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        PersonRepo().get()
+        val person = PersonRepo().get(UUID.fromString(this.intent.getStringExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID")))
 
     }
-
 
 
 }

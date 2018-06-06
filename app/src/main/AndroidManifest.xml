@@ -22,7 +22,14 @@
         <activity
             android:name=".SelectSpende"
             android:label="@string/title_activity_select_spende"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="stutz.mobi.ch.stutz.select_spende" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
