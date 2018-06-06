@@ -21,7 +21,7 @@ class StutzStart : AppCompatActivity() {
     }
 
     fun loginclicked(menuItem: MenuItem) {
-        val intent = Intent("stutz.ch.mobi.stutz.LOGIN")
+        val intent = Intent("stutz.mobi.ch.stutz.LOGIN")
         startActivity(intent)
     }
 

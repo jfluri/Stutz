@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="stutz.mobi.ch.stutz">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +16,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".StutzStart"
-            android:label="Stutz Start"
+            android:label="Person suchen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,12 +25,13 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".SelectSpende"
-            android:label="@string/title_activity_select_spende"
+            android:label="Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.select_spende" />
@@ -39,6 +45,16 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.DANKE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="stutz.mobi.ch.stutz.LOGIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
