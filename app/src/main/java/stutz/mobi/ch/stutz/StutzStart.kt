@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 
-import kotlinx.android.synthetic.main.activity_person_suchen.*
+import kotlinx.android.synthetic.main.activity_stutz_start.*
 
-class PersonSuchen : AppCompatActivity() {
+class StutzStart : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_person_suchen)
-        setSupportActionBar(toolbar)
+        setContentView(R.layout.activity_stutz_start)
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

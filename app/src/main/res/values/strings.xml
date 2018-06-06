@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Stutz</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_person_suchen">PersonSuchen</string>
+    <string name="title_activity_person_suchen">Stutz</string>
 </resources>
