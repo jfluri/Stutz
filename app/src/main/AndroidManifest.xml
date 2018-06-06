@@ -58,6 +58,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SpendenAnzeigenUndSuchenActivity"
+            android:label="@string/title_activity_spenden_anzeigen_und_suchen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -23,6 +23,7 @@ import android.widget.TextView
 
 import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
+import android.content.Intent
 
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -264,7 +265,9 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             showProgress(false)
 
             if (success!!) {
-                finish()
+                val intent = Intent("stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN")
+                startActivity(intent)
+                // finish()
             } else {
                 password.error = "Ungültiges Passwort"
                 password.requestFocus()
