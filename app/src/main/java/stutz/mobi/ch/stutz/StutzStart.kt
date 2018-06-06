@@ -15,9 +15,8 @@ class StutzStart : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stutz_start)
 
-        person_suche_resultat.adapter = ArrayAdapter(
-                this, R.layout.person_suche_resultat_layout,
-                R.id.gefundenePerson,
+        person_suche_resultat.adapter = PersonAdapter(
+                this,
                 PersonRepo().search(nameSuchePerson.text.toString()))
         nameSuchePerson.addTextChangedListener(object:TextWatcher{
             override fun afterTextChanged(s: Editable?) {
