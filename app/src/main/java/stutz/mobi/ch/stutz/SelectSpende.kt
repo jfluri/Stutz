@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_select_spende.*
+import kotlinx.android.synthetic.main.content_select_spende.*
 import java.util.*
 
 class SelectSpende : AppCompatActivity() {
@@ -19,6 +20,7 @@ class SelectSpende : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
         val person = PersonRepo().get(UUID.fromString(this.intent.getStringExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID")))
+        name.text = person.name
 
     }
 
