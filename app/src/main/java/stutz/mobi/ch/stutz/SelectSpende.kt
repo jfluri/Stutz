@@ -17,21 +17,17 @@ class SelectSpende : AppCompatActivity() {
         setContentView(R.layout.activity_select_spende)
         setSupportActionBar(toolbar)
 
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
         val person = PersonRepo().get(UUID.fromString(this.intent.getStringExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID")))
         name.text = person.name
         location.text = person.region
         personImage.setImageResource(person.imageResId)
 
         sleeper.setOnClickListener({
+            val spende = Spende(UUID.randomUUID(), person.id, UUID.fromString("567dae99-7763-4781-b3fa-c7443894e342"), 5.00, Date())
+            SpendeRepo.allSpenden.add(spende)
             startActivity(Intent("stutz.mobi.ch.stutz.DANKE"))
-            //TODO Backend abbuchung
         })
 
     }
-
 
 }
