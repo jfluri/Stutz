@@ -17,7 +17,7 @@
         <activity
             android:name=".SplashActivity"
             android:label="Stutz"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

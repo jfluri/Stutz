@@ -14,13 +14,11 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         try {
             // Simulate network access.
-            Thread.sleep(5000)
+            Thread.sleep(500)
         } catch (e: InterruptedException) {
         }
         startActivity(Intent(this, StutzStart::class.java))
         finish()
     }
-
-
 
 }
