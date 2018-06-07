@@ -28,22 +28,24 @@
             android:id="@+id/sucheSpendenNachName"
             android:layout_width="337dp"
             android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="80dp"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="25dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
             android:id="@+id/listSpenden"
             android:layout_width="365dp"
-            android:layout_height="441dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sucheSpendenNachName"
-            tools:layout_editor_absoluteX="10dp" />
+            android:layout_height="387dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sucheSpendenNachName" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>

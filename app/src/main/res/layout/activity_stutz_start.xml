@@ -55,6 +55,8 @@
             android:id="@+id/person_suche_resultat"
             android:layout_width="wrap_content"
             android:layout_height="475dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameSuchePerson" />
     </android.support.constraint.ConstraintLayout>
