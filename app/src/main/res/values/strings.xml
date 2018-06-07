@@ -20,4 +20,5 @@
     </string>
     <string name="title_activity_spenden_anzeigen_und_suchen">SpendenAnzeigenUndSuchenActivity
     </string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

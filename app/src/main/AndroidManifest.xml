@@ -15,14 +15,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".StutzStart"
-            android:label="Person suchen"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".SplashActivity"
+            android:label="Stutz"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".StutzStart"
+            android:label="Person suchen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.MAIN" />
 
@@ -74,6 +79,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.DANKE_DIENSTLEISTER" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
