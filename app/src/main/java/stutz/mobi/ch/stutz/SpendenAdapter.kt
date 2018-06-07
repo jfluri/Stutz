@@ -5,21 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import kotlinx.android.synthetic.main.spende_suche_resultat_layout.view.*
+import kotlinx.android.synthetic.main.cell_detail_layout.view.*
 
-class SpendenAdapter: ArrayAdapter<Spende>  {
+class SpendenAdapter : ArrayAdapter<Spende> {
 
-    constructor(context: Context, values:List<Spende>):super(context,R.layout.spende_suche_resultat_layout,values)
+    constructor(context: Context, values: List<Spende>) : super(context, -1, values)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view = LayoutInflater.from(this.context).inflate(R.layout.spende_suche_resultat_layout, parent,false)
+        val view = LayoutInflater.from(this.context).inflate(R.layout.cell_detail_layout, parent, false)
         val spende = this.getItem(position)
-        val dienstleisterId = spende.dienstleisterId
-        val dienstleister = DienstleisterRepo().get(dienstleisterId)
-        view.dienstleistung.text = dienstleister.dienstleistung
+        val dienstleister = DienstleisterRepo().get(spende.dienstleisterId)
         val person = PersonRepo().get(spende.personId)
-        view.person.text = person.name
-        view.imagePerson.setImageResource(person.imageResId)
+
+        view.title.text = dienstleister.dienstleistung
+        view.subtitle.text = person.name
+        view.image.setImageResource(person.imageResId)
         return view
     }
 }
