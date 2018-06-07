@@ -20,7 +20,7 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
 
         listSpenden.adapter = SpendenAdapter(
                 this,
-                SpendeRepo().search(sucheSpendenNachName.text.toString(), LoginStore.dienstleister))
+                SpendeRepo.search(sucheSpendenNachName.text.toString(), LoginStore.dienstleister))
         sucheSpendenNachName.addTextChangedListener(object: TextWatcher {
             override fun afterTextChanged(s: Editable?) {
             }
@@ -31,12 +31,14 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val adapter = listSpenden.adapter as ArrayAdapter<Spende>
                 adapter.clear()
-                adapter.addAll(SpendeRepo().search(s.toString(), LoginStore.dienstleister))
+                adapter.addAll(SpendeRepo.search(s.toString(), LoginStore.dienstleister))
             }
         })
 
 
         listSpenden.setOnItemClickListener  { parent:Any, view: View, position:Int, id:Long ->
+            val spende = listSpenden.getItemAtPosition(position) as Spende
+            SpendeRepo.remove(spende)
             startActivity(Intent("stutz.mobi.ch.stutz.DANKE_DIENSTLEISTER"))
         }
 

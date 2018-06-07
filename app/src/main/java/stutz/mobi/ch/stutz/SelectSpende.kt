@@ -24,6 +24,7 @@ class SelectSpende : AppCompatActivity() {
         val person = PersonRepo().get(UUID.fromString(this.intent.getStringExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID")))
         name.text = person.name
         location.text = person.region
+        personImage.setImageResource(person.imageResId)
 
         sleeper.setOnClickListener({
             startActivity(Intent("stutz.mobi.ch.stutz.DANKE"))

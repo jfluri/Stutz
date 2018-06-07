@@ -16,6 +16,9 @@ class PersonAdapter: ArrayAdapter<Person>  {
         val person = this.getItem(position)
         view.name.text = person.name
         view.region.text = person.region
+
+        view.imagePerson.setImageResource(person.imageResId)
+
         return view
 
     }

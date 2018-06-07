@@ -8,7 +8,7 @@
         android:id="@+id/region"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView5"
+        android:layout_alignBottom="@+id/imagePerson"
         android:layout_alignParentStart="true"
         android:layout_marginStart="151dp"
         android:text="TextView" />
@@ -23,7 +23,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imagePerson"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"

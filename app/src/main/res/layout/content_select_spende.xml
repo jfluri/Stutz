@@ -63,7 +63,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/personImage"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/personImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:layout_marginTop="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/personImage"
                 app:layout_constraintTop_toBottomOf="@+id/name" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

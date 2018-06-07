@@ -65,7 +65,7 @@
         </activity>
         <activity
             android:name=".SpendenAnzeigenUndSuchenActivity"
-            android:label="@string/title_activity_spenden_anzeigen_und_suchen"
+            android:label="Verfügbare Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN" />

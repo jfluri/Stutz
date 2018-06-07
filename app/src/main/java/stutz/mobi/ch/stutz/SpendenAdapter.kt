@@ -17,8 +17,9 @@ class SpendenAdapter: ArrayAdapter<Spende>  {
         val dienstleisterId = spende.dienstleisterId
         val dienstleister = DienstleisterRepo().get(dienstleisterId)
         view.dienstleistung.text = dienstleister.dienstleistung
-        view.person.text = PersonRepo().get(spende.personId).name
+        val person = PersonRepo().get(spende.personId)
+        view.person.text = person.name
+        view.imagePerson.setImageResource(person.imageResId)
         return view
-
     }
 }
