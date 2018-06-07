@@ -10,8 +10,11 @@ class SpendeRepo {
                             Spende(UUID.fromString("86c96ea7-0a6a-46d4-938f-c6fdf48aa936"), UUID.fromString("9432af4f-8c3d-42a5-8a16-dcb5359100fd"), UUID.fromString("593dfa65-b917-4e95-ad04-b8d6122eebaf"), 5.00, Date())
                             )
 
-    fun search(name: String):List<Spende> {
-        return allSpenden.filter { PersonRepo().get(it.personId).name.startsWith(name, true)}
+    fun search(name: String, dienstleister: Dienstleister?):List<Spende> {
+        return allSpenden.filter { it ->
+            val person = PersonRepo().get(it.personId)
+             person.name.startsWith(name, true) && dienstleister != null && dienstleister.id.equals(it.dienstleisterId)
+        }
     }
 
     fun get(id: UUID) : Spende{

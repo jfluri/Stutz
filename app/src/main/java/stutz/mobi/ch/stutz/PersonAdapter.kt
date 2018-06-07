@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.person_suche_resultat_layout.view.*
-import java.security.AccessControlContext
 
 class PersonAdapter: ArrayAdapter<Person>  {
 
@@ -14,7 +13,9 @@ class PersonAdapter: ArrayAdapter<Person>  {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view = LayoutInflater.from(this.context).inflate(R.layout.person_suche_resultat_layout, parent,false)
-        view.gefundenePerson.text = this.getItem(position).name
+        val person = this.getItem(position)
+        view.name.text = person.name
+        view.region.text = person.region
         return view
 
     }

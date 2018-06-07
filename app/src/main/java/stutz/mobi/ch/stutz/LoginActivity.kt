@@ -111,13 +111,6 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
         var cancel = false
         var focusView: View? = null
 
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(passwordStr) && !isPasswordValid(passwordStr)) {
-            password.error = "Das Passwort ist zu kurz"
-            focusView = password
-            cancel = true
-        }
-
         // Check for a valid email address.
         if (TextUtils.isEmpty(emailStr)) {
             email.error = "Email Adresse erforderlich"
@@ -146,9 +139,6 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
         return email.contains("@")
     }
 
-    private fun isPasswordValid(password: String): Boolean {
-        return password.length > 4
-    }
 
     /**
      * Shows the progress UI and hides the login form.
@@ -265,6 +255,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             showProgress(false)
 
             if (success!!) {
+                LoginStore.dienstleister = DienstleisterRepo().getByUsername(email.text.toString())
                 val intent = Intent("stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN")
                 startActivity(intent)
                 // finish()
