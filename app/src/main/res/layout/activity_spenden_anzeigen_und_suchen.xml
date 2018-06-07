@@ -20,6 +20,30 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_spenden_anzeigen_und_suchen" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/sucheSpendenNachName"
+            android:layout_width="337dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="25dp" />
+
+        <ListView
+            android:id="@+id/listSpenden"
+            android:layout_width="365dp"
+            android:layout_height="441dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sucheSpendenNachName"
+            tools:layout_editor_absoluteX="10dp" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>
