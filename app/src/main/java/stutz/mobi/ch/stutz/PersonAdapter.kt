@@ -1,13 +1,23 @@
 package stutz.mobi.ch.stutz
 
 import android.content.Context
+import android.database.ContentObserver
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.cell_detail_layout.view.*
+import java.util.*
 
-class PersonAdapter : ArrayAdapter<Person> {
+class PersonAdapter: ArrayAdapter<Person>  , Observer {
+
+    override fun update(o: Observable?, arg: Any?) {
+        val persons = arg as List<Person>
+        this.clear()
+        this.addAll(persons)
+        this.notifyDataSetChanged()
+        println("received update from Oberservable... " + persons.size)
+    }
 
     constructor(context: Context, values: List<Person>) : super(context, R.layout.cell_detail_layout, values)
 
