@@ -30,9 +30,12 @@ class StutzStart : AppCompatActivity() {
         setContentView(R.layout.activity_stutz_start)
         setSupportActionBar(toolbar2)
 
-        person_suche_resultat.adapter = PersonAdapter(
-                this,
-                PersonRepo().search(nameSuchePerson.text.toString()))
+        val persRepo = PersonRepo()
+
+        val persAdapter = PersonAdapter(this, persRepo.search(nameSuchePerson.text.toString()))
+        PersonRepoStore.addObserver(persAdapter)
+        person_suche_resultat.adapter = persAdapter
+
         nameSuchePerson.addTextChangedListener(object:TextWatcher{
             override fun afterTextChanged(s: Editable?) {
             }
