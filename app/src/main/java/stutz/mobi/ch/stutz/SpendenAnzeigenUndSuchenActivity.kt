@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 
@@ -12,10 +14,22 @@ import kotlinx.android.synthetic.main.activity_spenden_anzeigen_und_suchen.*
 
 class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = getMenuInflater()
+        inflater.inflate(R.menu.menudienstleiter, menu)
+        return true
+    }
+
+    fun logoutclicked(menuItem: MenuItem) {
+        LoginStore.dienstleister = null
+        val intent = Intent("stutz.mobi.ch.stutz.MAIN")
+        startActivity(intent)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spenden_anzeigen_und_suchen)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbarSpendeSuche)
 
 
         listSpenden.adapter = SpendenAdapter(
