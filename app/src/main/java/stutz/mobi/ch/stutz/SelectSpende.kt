@@ -25,7 +25,7 @@ class SelectSpende : AppCompatActivity() {
         sleeper.setOnClickListener({
             val spende = Spende(UUID.randomUUID(), person.id, UUID.fromString("567dae99-7763-4781-b3fa-c7443894e342"), 5.00)
             SpendeRepo.allSpenden.add(spende)
-            startActivity(Intent("stutz.mobi.ch.stutz.DANKE"))
+            startActivity(Intent("stutz.mobi.ch.stutz.PAYMENT"))
         })
 
     }
