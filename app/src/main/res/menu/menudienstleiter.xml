@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/logout"
+        android:onClick="logoutclicked"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="Einstellungen" />
+
+</menu>
