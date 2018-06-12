@@ -8,7 +8,7 @@ requiring them to own a phone or an account. The donation is purpose bound.
 The idea is to replace physical coins by mobile payment by keeping the donation process as simple as possible.
 
 ## TO-DO
-There are still open points waiting for implementation:
+There are still some open points waiting for implementation:
 * Firestore and Firebase-Storage implementation
 * Changing from mutable-lists-data to firebase-data
 * Unit Testing
