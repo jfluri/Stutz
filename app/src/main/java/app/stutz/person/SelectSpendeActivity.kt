@@ -1,14 +1,16 @@
-package app.stutz
+package app.stutz.person
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import app.stutz.R
+import app.stutz.person.spenden.model.Spende
 
 import kotlinx.android.synthetic.main.activity_select_spende.*
 import kotlinx.android.synthetic.main.content_select_spende.*
 import java.util.*
 
-class SelectSpende : AppCompatActivity() {
+class SelectSpendeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,5 +1,6 @@
-package app.stutz
+package app.stutz.dienstleister
 
+import app.stutz.dienstleister.model.Dienstleister
 import java.util.*
 
 class DienstleisterRepo {

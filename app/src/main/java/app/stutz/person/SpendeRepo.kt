@@ -1,6 +1,8 @@
-package app.stutz
+package app.stutz.person
 
 
+import app.stutz.dienstleister.model.Dienstleister
+import app.stutz.person.spenden.model.Spende
 import java.util.*
 
 object SpendeRepo {

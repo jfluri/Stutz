@@ -1,10 +1,12 @@
-package app.stutz
+package app.stutz.person.suchen.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import app.stutz.R
+import app.stutz.person.suchen.model.Person
 import kotlinx.android.synthetic.main.cell_detail_layout.view.*
 import java.util.*
 

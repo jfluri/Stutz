@@ -1,12 +1,13 @@
-package app.stutz
+package app.stutz.person
 
+import app.stutz.R
+import app.stutz.person.suchen.model.Person
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.storage.FirebaseStorage
 import java.util.*
 
 
@@ -28,7 +29,6 @@ class PersonRepo() {
     companion object {
         init {
             if(!PersonRepoStore.initialized) {
-                val storage = FirebaseStorage.getInstance()
                 val store = FirebaseFirestore.getInstance()
                 val settings = FirebaseFirestoreSettings.Builder()
                         .setTimestampsInSnapshotsEnabled(true)

@@ -1,4 +1,4 @@
-package app.stutz
+package app.stutz.person.spenden.model
 
 import java.util.*
 

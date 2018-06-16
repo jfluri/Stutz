@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.StutzStart"
+            android:name="app.stutz.StutzStartActivity"
             android:label="Person suchen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.SelectSpende"
+            android:name="app.stutz.person.SelectSpendeActivity"
             android:label="Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.Danke"
+            android:name="app.stutz.person.DankeActivity"
             android:label="@string/title_activity_danke"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -55,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.LoginActivity"
+            android:name="app.stutz.dienstleister.LoginActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="app.stutz.LOGIN" />
@@ -64,7 +64,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.SpendenAnzeigenUndSuchenActivity"
+            android:name="app.stutz.person.SpendenAnzeigenUndSuchenActivity"
             android:label="Verfügbare Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -74,7 +74,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.DankeDienstleister"
+            android:name="app.stutz.dienstleister.DankeDienstleisterActivity"
             android:label="@string/title_activity_danke"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -84,7 +84,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.PaymentActivity"
+            android:name="app.stutz.person.PaymentActivity"
             android:label="@string/title_activity_payment"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

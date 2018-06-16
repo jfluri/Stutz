@@ -10,9 +10,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
+import app.stutz.person.suchen.model.Person
+import app.stutz.person.suchen.adapter.PersonAdapter
+import app.stutz.person.PersonRepo
+import app.stutz.person.PersonRepoStore
 import kotlinx.android.synthetic.main.activity_stutz_start.*
 
-class StutzStart : AppCompatActivity() {
+class StutzStartActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = getMenuInflater()
@@ -54,7 +58,7 @@ class StutzStart : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        person_suche_resultat.setOnItemClickListener  {parent:Any,  view: View, position:Int, id:Long ->
+        person_suche_resultat.setOnItemClickListener  { _:Any, _: View, position:Int, _:Long ->
             val person: Person = person_suche_resultat.adapter.getItem(position) as Person
 
             val i = Intent("app.stutz.select_spende")

@@ -1,4 +1,4 @@
-package app.stutz
+package app.stutz.person
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
+import app.stutz.dienstleister.LoginStore
+import app.stutz.R
+import app.stutz.person.spenden.adapter.SpendenAdapter
+import app.stutz.person.spenden.model.Spende
 
 import kotlinx.android.synthetic.main.activity_spenden_anzeigen_und_suchen.*
 
@@ -50,7 +54,7 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
         })
 
 
-        listSpenden.setOnItemClickListener  { parent:Any, view: View, position:Int, id:Long ->
+        listSpenden.setOnItemClickListener  { _:Any, _: View, position:Int, _:Long ->
             val spende = listSpenden.getItemAtPosition(position) as Spende
             SpendeRepo.remove(spende)
             startActivity(Intent("app.stutz.DANKE_DIENSTLEISTER"))

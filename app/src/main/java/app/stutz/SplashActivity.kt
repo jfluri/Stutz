@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
     internal val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
 
-            val intent = Intent(applicationContext, StutzStart::class.java)
+            val intent = Intent(applicationContext, StutzStartActivity::class.java)
             startActivity(intent)
             finish()
         }

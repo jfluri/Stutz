@@ -1,4 +1,4 @@
-package app.stutz
+package app.stutz.dienstleister
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -24,6 +24,7 @@ import android.widget.TextView
 import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
 import android.content.Intent
+import app.stutz.R
 
 import kotlinx.android.synthetic.main.activity_login.*
 

@@ -1,4 +1,4 @@
-package app.stutz
+package app.stutz.dienstleister.model
 
 import java.util.*
 

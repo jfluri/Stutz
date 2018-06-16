@@ -1,5 +1,6 @@
-package app.stutz
+package app.stutz.person
 
+import app.stutz.person.suchen.model.Person
 import java.util.*
 
 
