@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/stutz_final2"
     android:visibility="visible"
-    tools:context=".SplashActivity">
+    tools:context="app.stutz.SplashActivity">
 
 
 </android.support.design.widget.CoordinatorLayout>

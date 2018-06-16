@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import android.content.Intent
 import android.os.Bundle
@@ -21,7 +21,7 @@ class StutzStart : AppCompatActivity() {
     }
 
     fun loginclicked(menuItem: MenuItem) {
-        val intent = Intent("stutz.mobi.ch.stutz.LOGIN")
+        val intent = Intent("app.stutz.LOGIN")
         startActivity(intent)
     }
 
@@ -55,10 +55,10 @@ class StutzStart : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
         person_suche_resultat.setOnItemClickListener  {parent:Any,  view: View, position:Int, id:Long ->
-            val person:Person = person_suche_resultat.adapter.getItem(position) as Person
+            val person: Person = person_suche_resultat.adapter.getItem(position) as Person
 
-            val i = Intent("stutz.mobi.ch.stutz.select_spende")
-            i.putExtra("stutz.mobi.ch.stutz.EXTRA_PERSON_ID", person.id.toString())
+            val i = Intent("app.stutz.select_spende")
+            i.putExtra("app.stutz.EXTRA_PERSON_ID", person.id.toString())
             startActivity(i)
         }
     }

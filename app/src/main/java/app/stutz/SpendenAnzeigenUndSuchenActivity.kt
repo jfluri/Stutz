@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import android.content.Intent
 import android.os.Bundle
@@ -22,7 +22,7 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
 
     fun logoutclicked(menuItem: MenuItem) {
         LoginStore.dienstleister = null
-        val intent = Intent("stutz.mobi.ch.stutz.MAIN")
+        val intent = Intent("app.stutz.MAIN")
         startActivity(intent)
     }
 
@@ -53,7 +53,7 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
         listSpenden.setOnItemClickListener  { parent:Any, view: View, position:Int, id:Long ->
             val spende = listSpenden.getItemAtPosition(position) as Spende
             SpendeRepo.remove(spende)
-            startActivity(Intent("stutz.mobi.ch.stutz.DANKE_DIENSTLEISTER"))
+            startActivity(Intent("app.stutz.DANKE_DIENSTLEISTER"))
         }
 
     }

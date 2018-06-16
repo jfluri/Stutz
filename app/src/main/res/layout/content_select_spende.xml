@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".SelectSpende"
+    tools:context="app.stutz.SelectSpende"
     tools:showIn="@layout/activity_select_spende">
 
     <Button

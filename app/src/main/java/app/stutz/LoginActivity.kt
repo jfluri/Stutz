@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -256,7 +256,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 
             if (success!!) {
                 LoginStore.dienstleister = DienstleisterRepo().getByUsername(email.text.toString())
-                val intent = Intent("stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN")
+                val intent = Intent("app.stutz.SPENDEN_ANZEIGEN")
                 startActivity(intent)
                 // finish()
             } else {

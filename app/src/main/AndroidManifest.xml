@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="stutz.mobi.ch.stutz">
+    package="app.stutz">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="app.stutz.SplashActivity"
             android:label="Stutz"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -25,70 +25,70 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StutzStart"
+            android:name="app.stutz.StutzStart"
             android:label="Person suchen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.MAIN" />
+                <action android:name="app.stutz.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectSpende"
+            android:name="app.stutz.SelectSpende"
             android:label="Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.select_spende" />
+                <action android:name="app.stutz.select_spende" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Danke"
+            android:name="app.stutz.Danke"
             android:label="@string/title_activity_danke"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.DANKE" />
+                <action android:name="app.stutz.DANKE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="app.stutz.LoginActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.LOGIN" />
+                <action android:name="app.stutz.LOGIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SpendenAnzeigenUndSuchenActivity"
+            android:name="app.stutz.SpendenAnzeigenUndSuchenActivity"
             android:label="Verfügbare Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.SPENDEN_ANZEIGEN" />
+                <action android:name="app.stutz.SPENDEN_ANZEIGEN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".DankeDienstleister"
+            android:name="app.stutz.DankeDienstleister"
             android:label="@string/title_activity_danke"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.DANKE_DIENSTLEISTER" />
+                <action android:name="app.stutz.DANKE_DIENSTLEISTER" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".PaymentActivity"
+            android:name="app.stutz.PaymentActivity"
             android:label="@string/title_activity_payment"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="stutz.mobi.ch.stutz.PAYMENT" />
+                <action android:name="app.stutz.PAYMENT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

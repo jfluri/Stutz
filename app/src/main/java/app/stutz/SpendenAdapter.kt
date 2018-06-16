@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import android.content.Context
 import android.view.LayoutInflater

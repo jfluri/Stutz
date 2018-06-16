@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import java.util.*
 

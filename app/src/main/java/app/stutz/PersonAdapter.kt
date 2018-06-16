@@ -1,7 +1,6 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import android.content.Context
-import android.database.ContentObserver
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

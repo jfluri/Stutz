@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
@@ -17,7 +17,7 @@ class PersonRepo() {
         return getPerson().filter { it.name.startsWith(name, true)}
     }
 
-    fun get(id: UUID) : Person{
+    fun get(id: UUID) : Person {
         return getPerson().find { it.id.equals(id) }!!
     }
 

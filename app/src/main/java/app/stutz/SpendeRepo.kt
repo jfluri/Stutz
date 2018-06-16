@@ -1,4 +1,4 @@
-package stutz.mobi.ch.stutz
+package app.stutz
 
 
 import java.util.*
@@ -20,7 +20,7 @@ object SpendeRepo {
         }
     }
 
-    fun get(id: UUID) : Spende{
+    fun get(id: UUID) : Spende {
         return allSpenden.find { it.id.equals(id) }!!
     }
 
