@@ -10,11 +10,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import app.stutz.R
-import app.stutz.R.id.*
 import app.stutz.dienstleister.adapter.DienstleisterAdapter
-import app.stutz.person.SpendeRepo
-import app.stutz.person.spenden.adapter.SpendenAdapter
-import app.stutz.person.spenden.model.Spende
+import app.stutz.spenden.SpendeRepo
+import app.stutz.spenden.adapter.SpendenAdapter
+import app.stutz.spenden.model.Spende
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query

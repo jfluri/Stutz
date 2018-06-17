@@ -15,9 +15,9 @@ class DankeDienstleisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_danke_dienstleister)
         setSupportActionBar(toolbar)
 
-        zurueck.setOnClickListener( {
+        zurueck.setOnClickListener {
             startActivity(Intent("app.stutz.SPENDEN_ANZEIGEN"))
-        })
+        }
     }
 
     override fun onBackPressed() {

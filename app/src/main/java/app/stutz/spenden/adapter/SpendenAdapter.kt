@@ -1,4 +1,4 @@
-package app.stutz.person.spenden.adapter
+package app.stutz.spenden.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import app.stutz.R
 import app.stutz.dienstleister.DienstleisterRepo
 import app.stutz.person.PersonRepo
-import app.stutz.person.spenden.model.Spende
+import app.stutz.spenden.model.Spende
 import kotlinx.android.synthetic.main.cell_detail_layout.view.*
 
 class SpendenAdapter : ArrayAdapter<Spende> {

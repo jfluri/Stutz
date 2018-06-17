@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.stutz">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- https://developer.android.com/training/camera/photobasics -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.person.SelectSpendeActivity"
+            android:name="app.stutz.spenden.SelectSpendeActivity"
             android:label="Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
