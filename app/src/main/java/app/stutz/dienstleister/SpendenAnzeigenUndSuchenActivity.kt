@@ -1,4 +1,4 @@
-package app.stutz.person
+package app.stutz.dienstleister
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,14 +9,27 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
-import app.stutz.dienstleister.LoginStore
 import app.stutz.R
+import app.stutz.R.id.*
+import app.stutz.dienstleister.adapter.DienstleisterAdapter
+import app.stutz.person.SpendeRepo
 import app.stutz.person.spenden.adapter.SpendenAdapter
 import app.stutz.person.spenden.model.Spende
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.Query.Direction.*
 
 import kotlinx.android.synthetic.main.activity_spenden_anzeigen_und_suchen.*
 
-class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
+class SpendenAnzeigenUndSuchenActivity : AppCompatActivity(), DienstleisterAdapter.OnSpendeSelectedListener {
+
+    val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
+    var query: Query? = null
+
+    override fun onSpendeSelected(spende: DocumentSnapshot) {
+        TODO("not implemented")
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = getMenuInflater()
@@ -32,6 +45,15 @@ class SpendenAnzeigenUndSuchenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        FirebaseFirestore.setLoggingEnabled(true)
+
+        query = firestore
+                .collection("Spenden")
+                .orderBy("erstelltAm", DESCENDING)
+
+        val dienstleisterAdapter = DienstleisterAdapter(query!!, this)
+
         setContentView(R.layout.activity_spenden_anzeigen_und_suchen)
         setSupportActionBar(toolbarSpendeSuche)
 

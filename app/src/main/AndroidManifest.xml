@@ -64,7 +64,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.stutz.person.SpendenAnzeigenUndSuchenActivity"
+            android:name="app.stutz.dienstleister.SpendenAnzeigenUndSuchenActivity"
             android:label="Verfügbare Spenden"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
