@@ -1,5 +1,5 @@
 # Stutz
-Repository for Mobiliar ChallengeDays 2018 (cdays.be) Team: Bits Please!
+Repository for ChallengeDays 2018 (cdays.be) Team: Bits Please!
 
 ## Description
 
@@ -17,3 +17,4 @@ There are still some open points waiting for implementation:
 * Beautification
 * Adding payment details to Dienstleister
 * Implementation of payment-app connection (app-to-app)
+* GPS based search
