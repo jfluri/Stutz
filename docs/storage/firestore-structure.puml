@@ -1,0 +1,9 @@
+@startuml
+(Dienstleister) --> (Dienstleistung)
+(Spender) --> (Spende)
+(Randständiger) <-- (Spende)
+(Spende) --> (Dienstleistung)
+
+(Dienstleister) .up.> (Ort)
+(Randständiger) .up.> (Ort)
+@enduml
