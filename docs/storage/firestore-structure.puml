@@ -1,4 +1,5 @@
 @startuml
+
 (Dienstleister) --> (Dienstleistung)
 (Spender) --> (Spende)
 (Randständiger) <-- (Spende)
@@ -6,4 +7,6 @@
 
 (Dienstleister) .up.> (Ort)
 (Randständiger) .up.> (Ort)
+(Spender) .up.> (Ort)
+
 @enduml
